@@ -179,13 +179,7 @@ $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 if($type != "text"){
     exit;
 }
-//返信データ作成 
-if ($text == 'はい') {
-	$response_format_text = [
-	"type"=>"text",
-        "text"=>"Hello, user"];
-} else if($text == 'シャム'){
-	for($i=0;$i<10;$i++){
+for($i=0;$i<10;$i++){
 	$randnum=rand(0,4);
     	$boxnum[1][$randnum]++;
     }
@@ -226,6 +220,13 @@ if ($text == 'はい') {
 	for($i=0;$i<1;$i++){
 		$randbox=$randbox.$randcords[$keys[$i]].",";
 	}
+//返信データ作成 
+if ($text == 'DDY') {
+	$response_format_text = [
+	"type"=>"text",
+        "text"=>"Hello, user"];
+} else if($text == 'シャム'){
+	
   $response_format_text = [
     "type" => "template",
     "altText" => "サプライを表示しています",
