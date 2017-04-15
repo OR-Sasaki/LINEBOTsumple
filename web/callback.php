@@ -224,6 +224,7 @@ for($i=0;$i<10;$i++){
 
 //返信データ作成 
 if ($text == 'DDY') {
+	$hoge=0;
 	$response_format_text = [
 	"type"=>"text",
         "text"=>$kihonbox."\n".$inboubox."\n".$umibebox."\n".$ikyoubox."\n".$teikokubox."\n".$eventbox."\n".$randbox];
