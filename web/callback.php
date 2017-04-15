@@ -232,7 +232,7 @@ if ($text == 'DDY') {
 	$response_format_text = [
 	"type"=>"text",
         "text"=>$hoge];
-	$hoge++;
+	$hoge=$hoge+1;
 }
 }else if($text == 'シャム'){
 	
