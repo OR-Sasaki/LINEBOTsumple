@@ -181,12 +181,6 @@ if($type != "text"){
 }
 //返信データ作成 
 if ($text == 'はい') {
-  $response_format_text = [
-    "type" => "text",
-    "altText" => "こちらのオリジナルメニューはいかがですか？",
-    "text"=>"てすと"
-    ]
-  ]; 
 } else if($text == 'シャム'){
 	for($i=0;$i<10;$i++){
 	$randnum=rand(0,4);
