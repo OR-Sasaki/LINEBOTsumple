@@ -220,11 +220,13 @@ for($i=0;$i<10;$i++){
 	for($i=0;$i<1;$i++){
 		$randbox=$randbox.$randcords[$keys[$i]].",";
 	}
+
+
 //返信データ作成 
 if ($text == 'DDY') {
 	$response_format_text = [
 	"type"=>"text",
-        "text"=>"Hello, user"];
+        "text"=>$kihonbox."\n".$inboubox."\n".$umibebox."\n".$ikyoubox."\n".$teikokubox."\n".$eventbox."\n".$randbox];
 } else if($text == 'シャム'){
 	
   $response_format_text = [
