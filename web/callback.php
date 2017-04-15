@@ -1,6 +1,7 @@
 <?php
 $accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
 //配列定義 
+$hoge=1;
 $box=array("基本","陰謀","異郷","海辺","帝国");
 $num=array(0,0,0,0,0); 
 $boxnum=array($box,$num); 
@@ -227,7 +228,13 @@ if ($text == 'DDY') {
 	$response_format_text = [
 	"type"=>"text",
         "text"=>$kihonbox."\n".$inboubox."\n".$umibebox."\n".$ikyoubox."\n".$teikokubox."\n".$eventbox."\n".$randbox];
-} else if($text == 'シャム'){
+}else if ($text == 'add') {
+	$response_format_text = [
+	"type"=>"text",
+        "text"=>$hoge];
+	$hoge++;
+}
+}else if($text == 'シャム'){
 	
   $response_format_text = [
     "type" => "template",
