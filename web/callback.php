@@ -183,7 +183,7 @@ if($type != "text"){
 if ($text == 'はい') {
 	$response_format_text = [
 	"type":"text",
-        "text":"Hello, user"]
+        "text":"Hello, user"];
 } else if($text == 'シャム'){
 	for($i=0;$i<10;$i++){
 	$randnum=rand(0,4);
