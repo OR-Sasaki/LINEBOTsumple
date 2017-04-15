@@ -1,7 +1,6 @@
 <?php
 $accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
 //配列定義 
-$hoge=1;
 $box=array("基本","陰謀","異郷","海辺","帝国");
 $num=array(0,0,0,0,0); 
 $boxnum=array($box,$num); 
