@@ -181,50 +181,12 @@ if($type != "text"){
 }
 //返信データ作成 
 if ($text == 'はい') {
-    for($i=0;$i<10;$i++){
-	$randnum=rand(0,3);
-    	$boxnum[1][$randnum]++;
-    }
-    $kihonbox="【基】";$inboubox="【陰】";$umibebox="【海】";$ikyoubox="【異】";
-    $keys=array_keys($kihoncords);
-    shuffle($keys);
-	for($i=0;$i<$boxnum[1][0];$i++){
-		$kihonbox=$kihonbox.$kihoncords[$keys[$i]].",";
-	}
-    $keys=array_keys($inboucords);
-    shuffle($keys);
-	for($i=0;$i<$boxnum[1][1];$i++){
-		$inboubox=$inboubox.$inboucords[$keys[$i]].",";
-	}
-    $keys=array_keys($ikyoucords);
-    shuffle($keys);
-	for($i=0;$i<$boxnum[1][2];$i++){
-		$ikyoubox=$ikyoubox.$ikyoucords[$keys[$i]].",";
-	}
-    $keys=array_keys($umibecords);
-    shuffle($keys);
-	for($i=0;$i<$boxnum[1][3];$i++){
-		$umibebox=$umibebox.$umibecords[$keys[$i]].",";
-	}
   $response_format_text = [
-    "type" => "template",
+    "type" => "text",
     "altText" => "こちらのオリジナルメニューはいかがですか？",
-    "template" => [
-      "type" => "buttons",
-      "title" => "基本".$boxnum[1][0]."陰謀".$boxnum[1][1]."異郷".$boxnum[1][2]."海辺".$boxnum[1][3],
-      "text" => $kihonbox.$inboubox.$ikyoubox.$umibebox,
-      "actions" => [
-          [
-            "type" => "message",
-            "label" => "もっかい",
-            "text" => "はい"
-          ]
-      ]
+    "text"=>"てすと"
     ]
-  ];
-} else if ($text == 'いいえ') {
-  exit;
-} else if ($text == '違うやつお願い') {
+  ]; 
 } else if($text == 'シャム'){
 	for($i=0;$i<10;$i++){
 	$randnum=rand(0,4);
