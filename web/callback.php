@@ -220,20 +220,12 @@ for($i=0;$i<10;$i++){
 	for($i=0;$i<1;$i++){
 		$randbox=$randbox.$randcords[$keys[$i]].",";
 	}
-
-
 //返信データ作成 
 if ($text == 'DDY') {
-	$hoge=0;
 	$response_format_text = [
 	"type"=>"text",
         "text"=>$kihonbox."\n".$inboubox."\n".$umibebox."\n".$ikyoubox."\n".$teikokubox."\n".$eventbox."\n".$randbox];
-}else if ($text == 'add') {
-	$response_format_text = [
-	"type"=>"text",
-        "text"=>$hoge];
-	$hoge+=1;
-}else if($text == 'シャム'){
+} else if($text == 'DY'){
 	
   $response_format_text = [
     "type" => "template",
@@ -248,7 +240,7 @@ if ($text == 'DDY') {
               [
             "type" => "message",
             "label" => "もっかい",
-            "text" => "シャム"
+            "text" => "DY"
           ]
             ]
           ],
@@ -259,7 +251,7 @@ if ($text == 'DDY') {
               [
             "type" => "message",
             "label" => "もっかい",
-            "text" => "シャム"
+            "text" => "DY"
               ]
             ]
           ],
@@ -270,7 +262,7 @@ if ($text == 'DDY') {
               [
             "type" => "message",
             "label" => "もっかい",
-            "text" => "シャム"
+            "text" => "DY"
               ]
             ]
           ],
